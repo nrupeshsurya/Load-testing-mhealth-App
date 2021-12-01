@@ -1,0 +1,9 @@
+venv/
+old/
+OnDemand/
+Provision/
+awsScript.py
+beginTime.txt
+closeTime.txt
+data.json
+script.py
