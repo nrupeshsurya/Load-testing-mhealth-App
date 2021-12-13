@@ -1,6 +1,12 @@
 from datetime import date, timedelta
 import random
 import boto3
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+tableName = os.getenv('tableName')
 
 # Get the service resource.
 dynamodb = boto3.resource('dynamodb')
@@ -30,7 +36,7 @@ for single_date in daterange(start_date, end_date):
     data.append(entry)
 
 finalData = {
-    "processed-data-india" : data
+    tableName : data
 }
 
 
@@ -41,8 +47,8 @@ def batch(iterable, n=1):
 
 client = boto3.client('dynamodb')
 
-for x in batch(finalData['processed-data-india'], 25):
-    subbatch_dict = {'processed-data-india': x}
+for x in batch(finalData[tableName], 25):
+    subbatch_dict = {tableName: x}
     response = client.batch_write_item(RequestItems=subbatch_dict)
 
 
