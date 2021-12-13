@@ -1,6 +1,5 @@
 import os
 import subprocess
-import sys
 import pandas as pd
 from datetime import datetime
 from matplotlib import pyplot as plt 
@@ -118,7 +117,7 @@ def plot(n):
 
 if __name__ == '__main__':
     print("hello")
-    n = int(sys.argv[1])
+    n = int(os.getenv('users'))
     print(n)
     createDirectory(n)
     loadTest(n)
