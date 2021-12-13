@@ -16,7 +16,7 @@ create a .env file with the following format
 apiURL=https://exampleURL.com
 apiId=exampleAPIId
 tableName=example-table-name
-time=5
+time=5 #in minutes
 users=10
 ```
 
