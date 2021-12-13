@@ -1,1 +1,0 @@
-locust -f responseTime.py --host <link here> --users 100 --spawn-rate 2 --csv=example --headless -t15m
