@@ -9,7 +9,7 @@ virtualenv -p /usr/bin/python3 venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-Use [AWS CLI](https://aws.amazon.com/cli/) to setup aws credentials before starting
+Use [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) to setup aws credentials before starting
 
 ```bash
 aws configure #you will be asked to enter secret ID and secret key
